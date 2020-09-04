@@ -24,4 +24,23 @@ export const Card = styled.div`
     align-items: flex-start;
     font-size: 19px;
     padding: 5px;
+    border-radius: 0 0 5px 5px;
+`;
+
+export const BackButton = styled.button`
+    width: 400px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+
+    a {
+        text-decoration: none;
+        color: #222831;
+        background: #ececec;
+    }
 `;

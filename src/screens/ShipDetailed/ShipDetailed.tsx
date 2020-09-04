@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import actions from 'actions';
 import { getShipDetails } from 'selectors';
@@ -22,6 +22,11 @@ const ShipDetailed: React.FC = () => {
 
     return (
         <s.ShipDetailed>
+            <s.BackButton>
+                <Link to='/'>
+                    Back to ships
+                </Link>
+            </s.BackButton>
             <s.Card>
                 <div>Name: {shipDetails.name}</div>
                 <div>Model: {shipDetails.model}</div>
