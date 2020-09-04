@@ -13,6 +13,11 @@ export const ShipCard = styled.div`
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
-
+    opacity: 0.6;
+    transition: all .25s;
     margin-bottom: 15px;
+
+    &:hover {
+        opacity: 1;
+    }
 `;
