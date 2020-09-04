@@ -1,6 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import 'assets/global.css';
+
 import Ships from 'screens/Ships';
 import ShipDetailed from 'screens/ShipDetailed';
 
