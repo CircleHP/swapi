@@ -16,7 +16,7 @@ const Pagination: React.FC = () => {
     const pages = count && Math.round(count / 10);
 
     // @ts-ignore
-    if(count < 10) {
+    if (count < 10) {
         return null;
     };
 
@@ -32,7 +32,7 @@ const Pagination: React.FC = () => {
                 {'<'}
             </s.ActionButton>
             {Array(pages).fill(0).map((item, i) => (
-                <s.PaginationItem active={currentPage === i + 1}>
+                <s.PaginationItem key={i} active={currentPage === i + 1}>
                     {i + 1}
                 </s.PaginationItem>
             ))}

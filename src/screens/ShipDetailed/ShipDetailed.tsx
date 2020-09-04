@@ -12,8 +12,6 @@ const ShipDetailed: React.FC = () => {
     const searchValue = location.pathname.replace('/ship/', '')
     const shipDetails = useSelector(getShipDetails);
 
-    console.log(shipDetails);
-
     useEffect(() => {
         actions.getShipDetails(searchValue);
     }, [searchValue]);

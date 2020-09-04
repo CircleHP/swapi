@@ -40,6 +40,6 @@ export default (state: TShips = initialState, action: any) => {
             return state = action.payload;
 
         default:
-            return state;
+            return initialState;
     };
 };
