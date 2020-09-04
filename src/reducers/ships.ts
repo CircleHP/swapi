@@ -33,6 +33,8 @@ const initialState = {
 
 export default (state: TShips = initialState, action: any) => {
     switch (action.type) {
+        case 'SHOW_NEXT_SUCCESS':
+        case 'SHOW_PREVIOUS_SUCCESS':
         case 'FETCH_SHIPS_SUCCES':
             return state = action.payload;
 

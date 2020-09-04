@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import actions from 'actions';
 import { getShipDetails } from 'selectors';
 
-import * as s from './ShipDetailder.styled';
+import * as s from './ShipDetailed.styled';
 
 const ShipDetailed: React.FC = () => {
     const location = useLocation();

@@ -10,5 +10,5 @@ export const getShipDetails = (state: TReduxState) => state.shipDetails;
 export const getCount = (state: TReduxState) => state.ships?.count;
 
 // pagination
-export const getNextPageURL = (state: TReduxState) => state.ships?.next;
-export const getPreviosPageURL = (state: TReduxState) => state.ships?.previous;
+export const getNextPageURL = (state: TReduxState): string | null => state.ships?.next;
+export const getPreviosPageURL = (state: TReduxState): string | null => state.ships?.previous;

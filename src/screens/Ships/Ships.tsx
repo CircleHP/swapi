@@ -5,6 +5,7 @@ import { getShips } from 'selectors';
 import actions from 'actions';
 
 import ShipCard from './ShipCard';
+import Pagination from './Pagination';
 
 import * as s from './Ships.styled';
 
@@ -20,6 +21,7 @@ const Ships: React.FC = () => {
             {ships.map((ship: any) => (
                 <ShipCard key={ship.name} ship={ship} />
             ))}
+            <Pagination />
         </s.ShipsContainer>
     );
 };
