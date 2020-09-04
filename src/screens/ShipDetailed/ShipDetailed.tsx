@@ -16,7 +16,7 @@ const ShipDetailed: React.FC = () => {
 
     useEffect(() => {
         actions.getShipDetails(searchValue);
-    }, []);
+    }, [searchValue]);
 
     if(!shipDetails) {
         return null

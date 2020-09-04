@@ -1,5 +1,3 @@
-import TShipDetails from 'reducers/shipDetails';
-
 export const getShipDetails = (name?: string) => {
     return (dispatch: any): void => {
         fetch(`https://swapi.dev/api/starships?search=${name}`)
