@@ -1,15 +1,13 @@
 import { combineReducers } from 'redux';
 
-import test, { TTest } from './test';
+import ships, { TShips } from './ships';
 
 export interface TReduxState {
-    // reducer: reducerType
-    test: TTest,
+    ships: TShips,
 };
 
 const mainReducer = combineReducers({
-    // reducerName
-    test,
+    ships,
 });
 
 export default mainReducer;
