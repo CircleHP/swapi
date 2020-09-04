@@ -3,6 +3,9 @@ import { TReduxState } from 'reducers';
 // ships data
 export const getShips = (state: TReduxState) => state.ships?.results;
 
+//ship details
+export const getShipDetails = (state: TReduxState) => state.shipDetails;
+
 // counter
 export const getCount = (state: TReduxState) => state.ships?.count;
 

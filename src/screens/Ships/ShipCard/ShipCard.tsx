@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import * as s from './ShipCard.styled';
 
@@ -13,7 +14,9 @@ const ShipCard: React.FC<TOwnProps> = ({ ship }) => {
 
     return (
         <s.ShipCard>
-            <div>{ship.name}</div>
+            <Link to={`/ship/${encodeURI(ship.name)}`}>
+                <div>{ship.name}</div>
+            </Link>
         </s.ShipCard>
     );
 };
