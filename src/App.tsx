@@ -1,8 +1,19 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
+import Ships from 'screens/Ships';
+import ShipDetailed from 'screens/ShipDetailed';
 
 const App: React.FC = () => {
     return (
-        <div />
+        <Switch>
+            <Route path='/ship/:id'>
+                <ShipDetailed />
+            </Route>
+            <Route exact path='/'>
+                <Ships />
+            </Route>
+        </Switch>
     );
 };
 
