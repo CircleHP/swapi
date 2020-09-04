@@ -1,8 +1,20 @@
 import React from 'react';
 
-const ShipCard: React.FC = () => {
+import * as s from './ShipCard.styled';
+
+interface TOwnProps {
+    ship: any;
+}
+
+const ShipCard: React.FC<TOwnProps> = ({ ship }) => {
+    if(!ship) {
+        return null;
+    };
+
     return (
-        <div />
+        <s.ShipCard>
+            <div>{ship.name}</div>
+        </s.ShipCard>
     );
 };
 
