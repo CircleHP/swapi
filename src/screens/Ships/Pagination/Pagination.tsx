@@ -15,6 +15,11 @@ const Pagination: React.FC = () => {
 
     const pages = count && Math.round(count / 10);
 
+    // @ts-ignore
+    if(count < 10) {
+        return null;
+    };
+
     return (
         <s.Pagination>
             <s.ActionButton

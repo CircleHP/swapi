@@ -26,3 +26,12 @@ export const showPrevious = (previosURL: string) => {
             .catch((response: Response) => dispatch({ type: 'SHOW_PREVIOS_ERROR', response}));
     };
 };
+
+export const searchShip = (name: string) => {
+    return (dispatch: any): void => {
+        fetch(`https://swapi.dev/api/starships?search=${name}`)
+            .then((ship: any) => ship.json())
+            .then((ship: any) => dispatch({ type: 'SEARCH_SHIP_SUCCESS', payload: ship}))
+            .catch((response: Response) => dispatch({ type: 'SEARCH_SHIP_ERROR', response}));
+    };
+};

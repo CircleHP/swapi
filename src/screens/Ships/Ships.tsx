@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { getShips } from 'selectors';
 import actions from 'actions';
 
+import Search from './Search';
 import ShipCard from './ShipCard';
 import Pagination from './Pagination';
 
@@ -18,10 +19,16 @@ const Ships: React.FC = () => {
 
     return (
         <s.ShipsContainer>
+            <Search />
             {ships.map((ship: any) => (
                 <ShipCard key={ship.name} ship={ship} />
             ))}
             <Pagination />
+            {ships.length === 0 &&
+                <s.SearchError>
+                    No results
+                </s.SearchError>
+            }
         </s.ShipsContainer>
     );
 };

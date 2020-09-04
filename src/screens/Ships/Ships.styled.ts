@@ -11,3 +11,13 @@ export const ShipsContainer = styled.div`
     padding: 40px;
     flex-wrap: wrap;
 `;
+
+export const SearchError = styled.div`
+    width: 300px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f2a365;
+    font-size: 19px;
+`;
